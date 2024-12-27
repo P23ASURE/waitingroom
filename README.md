@@ -32,7 +32,7 @@ A dynamic filter suite for:
 ---
 
 ### AAReverb (Scriptnode + FDNReverb.dsp) [Coming Soon]
-An adaptive and automatic reverb designed with innovative features:  
+An adaptive and automatic reverb:  
 
 #### Adaptive:  
 The reverb intensity is adjusted dynamically using an envelope follower. It becomes less pronounced when the signal is strong and more prominent when the signal is weak.
