@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="Compressor" Version="0.0.0">
+  <Node FactoryPath="container.chain" ID="Compressor" Bypassed="0">
+    <Nodes>
+      <Node ID="faust" FactoryPath="core.faust" Bypassed="0">
+        <Properties>
+          <Property ID="ClassId" Value="CompressorDSP"/>
+          <Property ID="NumParameters" Value="2"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="20.0" StepSize="0.1000000014901161"
+                     ID="knee" Value="14.50000021606684"/>
+          <Parameter MinValue="1.0" MaxValue="20.0" StepSize="0.1000000014901161"
+                     ID="ratio" Value="14.50000020116568"/>
+          <Parameter MinValue="-96.0" MaxValue="10.0" StepSize="0.1000000014901161"
+                     ID="threshold" Value="-46.69999926537275"/>
+          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="0.001000000047497451"
+                     ID="attack" Value="0.1900000090245157"/>
+          <Parameter MinValue="0.0" MaxValue="10.0" StepSize="0.009999999776482582"
+                     ID="release" Value="4.25999990478158"/>
+          <Parameter MinValue="-96.0" MaxValue="96.0" StepSize="0.1000000014901161"
+                     ID="makeup gain" Value="0.0"/>
+          <Parameter MinValue="0.0" MaxValue="100.0" StepSize="1.0" ID="channel link"
+                     Value="100.0"/>
+        </Parameters>
+        <SwitchTargets>
+          <SwitchTarget>
+            <Connections/>
+          </SwitchTarget>
+          <SwitchTarget>
+            <Connections/>
+          </SwitchTarget>
+        </SwitchTargets>
+      </Node>
+      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+            NodeColour="4289901234">
+        <Properties>
+          <Property ID="Connection" Value=""/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.9715319275856018"
+                     ID="Value" Value="-nan(ind)"/>
+        </Parameters>
+      </Node>
+    </Nodes>
+    <Parameters/>
+  </Node>
+</Network>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="0.9.0">
+  <Content Processor="Interface">
+    <Control type="ScriptButton" id="btnMono" value="1.0"/>
+    <Control type="ScriptSlider" id="knbBand1" value="99.0"/>
+    <Control type="ScriptSlider" id="knbBand2" value="345.0"/>
+    <Control type="ScriptSlider" id="knbBand3" value="3808.0"/>
+    <Control type="ScriptSlider" id="knbWidth1" value="0.0"/>
+    <Control type="ScriptSlider" id="knbWidth2" value="1.0"/>
+    <Control type="ScriptSlider" id="knbWidth3" value="1.0"/>
+    <Control type="ScriptSlider" id="knbGain1" value="1.000000953674316"/>
+    <Control type="ScriptSlider" id="knbGain2" value="8.940696716308594e-7"/>
+    <Control type="ScriptSlider" id="knbGain3" value="8.940696716308594e-7"/>
+    <Control type="ScriptTable" id="Table1" value="0.0" data=""/>
+    <Control type="ScriptTable" id="Table2" value="0.0" data=""/>
+    <Control type="ScriptTable" id="Table3" value="0.0" data=""/>
+    <Control type="ScriptSlider" id="knbGain0" value="0.0"/>
+    <Control type="ScriptButton" id="btnPreset" value="1.0"/>
+  </Content>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Preset>

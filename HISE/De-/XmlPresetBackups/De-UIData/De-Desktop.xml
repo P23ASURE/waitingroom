@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="pnlBackground" x="0.0" y="0.0" width="620"
+             height="420" itemColour="4290624957" itemColour2="4290624957"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile2" x="10.0" y="10.0"
+             width="600" height="110" ContentType="AudioAnalyser" bgColour="3355443"
+             itemColour="4282532418" itemColour2="4287335307" textColour="0"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;Analyser2&quot;,&#10;  &quot;Index&quot;: 2,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile1" x="10.0" y="10.0"
+             width="600" height="110" ContentType="AudioAnalyser" bgColour="3355443"
+             itemColour="4287137928" itemColour2="4282664004" textColour="0"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;Analyser1&quot;,&#10;  &quot;Index&quot;: 2,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptFloatingTile" id="FilterDeEsser" x="10.0" y="-50.0"
+             width="600.0" height="120.0" ContentType="FilterDisplay" bgColour="3355443"
+             itemColour="16777215" itemColour2="2483027967" Data="{&#10;  &quot;ProcessorId&quot;: &quot;De&quot;,&#10;  &quot;Index&quot;: 0,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptFloatingTile" id="FilterDeMudder" x="10.0" y="-50.0"
+             width="600.0" height="120.0" ContentType="FilterDisplay" bgColour="3355443"
+             itemColour="16777215" itemColour2="2483027967" Data="{&#10;  &quot;ProcessorId&quot;: &quot;De&quot;,&#10;  &quot;Index&quot;: 1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptFloatingTile" id="FilterBoxer" x="10.0" y="-50.0"
+             width="600.0" height="120.0" ContentType="FilterDisplay" bgColour="3355443"
+             itemColour="16777215" itemColour2="2483027967" Data="{&#10;  &quot;ProcessorId&quot;: &quot;De&quot;,&#10;  &quot;Index&quot;: 2,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptPanel" id="pnlDeEsser" x="410.0" y="130.0" width="200"
+             height="280" itemColour2="4290624957" itemColour="4290624957"
+             bgColour="4290624957" textColour="4290624957">
+    <Component type="ScriptLabel" id="Label2" x="0.0" y="0.0" width="200" height="30"
+               parentComponent="pnlDeEsser" text="DE-ESS" fontSize="20.0" editable="0"
+               fontName="UnisansALLCAPS" textColour="4282532418"/>
+    <Component type="ScriptSlider" id="knbDeEssThreshold" x="19.0" y="89.0"
+               mode="Decibel" min="-60.0" max="0.0" stepSize="0.1000000014901161"
+               suffix=" dB" middlePosition="-18.0" style="Vertical" width="40.0"
+               height="80.0" parentComponent="pnlDeEsser" bgColour="4282532418"
+               textColour="13816530" tooltip="determines the level (in dB) above which the signal is processed."/>
+    <Component type="ScriptLabel" id="Label13" x="19.0" y="59.0" width="160.0"
+               height="20.0" text="Frequency" parentComponent="pnlDeEsser" editable="0"
+               fontName="UnisansALLCAPS" textColour="4282532418"/>
+    <Component type="ScriptSlider" id="knbDeEssFrequency" x="19.0" y="39.0"
+               style="Horizontal" middlePosition="7000.0" stepSize="1.0" min="4000.0"
+               max="12000.0" suffix=" Hz" width="160.0" height="20.0" mode="Frequency"
+               parentComponent="pnlDeEsser" bgColour="4282532418" textColour="16777215"
+               tooltip="center frequency (in Hz) around which the processor works"/>
+    <Component type="ScriptSlider" id="knbDeEssRange" x="79.0" y="89.0" mode="Decibel"
+               min="-18.0" max="0.0" stepSize="0.1000000014901161" suffix=" dB"
+               middlePosition="-9.0" style="Vertical" width="40.0" height="80.0"
+               parentComponent="pnlDeEsser" bgColour="4282532418" textColour="13816530"
+               tooltip="determines how much signal reduction is applied"/>
+    <Component type="ScriptPanel" id="pnlGREss" x="139.0" y="89.0" width="40.0"
+               height="80.0" parentComponent="pnlDeEsser" tooltip="indicates the amount of compression applied to the EQ in real-time."/>
+    <Component type="ScriptLabel" id="Label14" x="129.0" y="169.0" parentComponent="pnlDeEsser"
+               width="60.0" height="20.0" text="Level" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label15" x="74.0" y="169.0" parentComponent="pnlDeEsser"
+               width="50.0" height="20.0" text="Range" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label16" x="9.0" y="169.0" parentComponent="pnlDeEsser"
+               width="60.0" height="20.0" text="Threshold" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptPanel" id="pnlSubPanel3" x="10.0" y="190.0" width="70.0"
+               height="70.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="35.0" parentComponent="pnlDeEsser"/>
+    <Component type="ScriptPanel" id="PanelBG2" x="20.0" y="200.0" width="50.0"
+               height="50.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="20.0" parentComponent="pnlDeEsser"/>
+    <Component type="ScriptPanel" id="PanelAbove2" x="30.0" y="210.0" width="30.0"
+               height="30.0" itemColour="4290624957" itemColour2="4283847250"
+               borderSize="1.0" borderRadius="20.0" parentComponent="pnlDeEsser"/>
+    <Component type="ScriptSlider" id="knbDeEssQ" x="20.0" y="200.0" width="50.0"
+               height="50.0" parentComponent="pnlDeEsser" min="0.300000011920929"
+               max="9.899999618530273" stepSize="0.1000000014901161" middlePosition="1.0"
+               defaultValue="1.0" tooltip=" controls the bandwidth around the center frequency"
+               showValuePopup="Left"/>
+    <Component type="ScriptLabel" id="Label17" x="15.0" y="251.0" width="60.0"
+               height="20.0" text="Q" parentComponent="pnlDeEsser" editable="0"
+               fontName="UnisansALLCAPS" textColour="4282532418" fontSize="15.0"/>
+  </Component>
+  <Component type="ScriptPanel" id="pnlDeBoxer" x="10.0" y="130.0" width="190"
+             height="280" itemColour2="4290624957" itemColour="4290624957"
+             bgColour="4290624957" textColour="4290624957">
+    <Component type="ScriptLabel" id="Label1" x="0.0" y="0.0" width="190" height="30"
+               parentComponent="pnlDeBoxer" text="DE-BOX" fontSize="20.0" editable="0"
+               fontName="UnisansALLCAPS" textColour="4282532418"/>
+    <Component type="ScriptLabel" id="Label3" x="16.0" y="59.0" parentComponent="pnlDeBoxer"
+               width="160.0" height="20.0" text="Frequency" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418"/>
+    <Component type="ScriptLabel" id="Label4" x="6.0" y="169.0" parentComponent="pnlDeBoxer"
+               width="60.0" height="20.0" text="Threshold" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label5" x="71.0" y="169.0" parentComponent="pnlDeBoxer"
+               width="50.0" height="20.0" text="Range" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label6" x="126.0" y="169.0" parentComponent="pnlDeBoxer"
+               width="60.0" height="20.0" text="Level" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptPanel" id="pnlSubPanel1" x="56.0" y="189.0" width="70.0"
+               height="70.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="35.0" parentComponent="pnlDeBoxer"/>
+    <Component type="ScriptPanel" id="PanelBG" x="66.0" y="199.0" width="50.0"
+               height="50.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="20.0" parentComponent="pnlDeBoxer"/>
+    <Component type="ScriptPanel" id="PanelAbove" x="76.0" y="209.0" width="30.0"
+               height="30.0" itemColour="4290624957" itemColour2="4283847250"
+               borderSize="1.0" borderRadius="20.0" parentComponent="pnlDeBoxer"/>
+    <Component type="ScriptSlider" id="knbDeBoxQ" x="66.0" y="199.0" width="50.0"
+               height="50.0" parentComponent="pnlDeBoxer" min="0.300000011920929"
+               max="9.899999618530273" stepSize="0.1000000014901161" middlePosition="1.0"
+               defaultValue="1.0" tooltip=" controls the bandwidth around the center frequency"
+               showValuePopup="Left"/>
+    <Component type="ScriptPanel" id="pnlGRBox" x="136.0" y="89.0" width="40.0"
+               height="80.0" parentComponent="pnlDeBoxer" tooltip="indicates the amount of compression applied to the EQ in real-time."/>
+    <Component type="ScriptSlider" id="knbFrequencyDeBox" x="16.0" y="39.0"
+               width="160.0" height="20.0" mode="Frequency" min="250.0" max="500.0"
+               stepSize="1.0" suffix=" Hz" middlePosition="325.0" style="Horizontal"
+               parentComponent="pnlDeBoxer" bgColour="4282532418" textColour="16777215"
+               tooltip="center frequency (in Hz) around which the processor works"/>
+    <Component type="ScriptSlider" id="knbDeBoxThreshold" x="16.0" y="89.0"
+               width="40.0" height="81.0" min="-60.0" max="0.0" middlePosition="-30.0"
+               suffix="db" style="Vertical" stepSize="0.1000000014901161" parentComponent="pnlDeBoxer"
+               bgColour="4282532418" textColour="13816530" tooltip="determines the level (in dB) above which the signal is processed."/>
+    <Component type="ScriptSlider" id="knbDeBoxRange" x="76.0" y="89.0" width="40.0"
+               height="80.0" min="-18.0" max="0.0" middlePosition="-9.0" suffix="db"
+               style="Vertical" stepSize="0.1000000014901161" parentComponent="pnlDeBoxer"
+               bgColour="4282532418" textColour="13816530" tooltip="determines how much signal reduction is applied"/>
+    <Component type="ScriptLabel" id="Label7" x="63.0" y="250.0" parentComponent="pnlDeBoxer"
+               width="60.0" height="20.0" text="Q" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="15.0"/>
+  </Component>
+  <Component type="ScriptPanel" id="pnlDeMudder" x="210.0" y="130.0" width="190"
+             height="280" itemColour2="4290624957" itemColour="4290624957"
+             bgColour="4290624957" textColour="4290624957">
+    <Component type="ScriptLabel" id="Label9" x="6.0" y="170.0" parentComponent="pnlDeMudder"
+               width="60.0" height="20.0" text="Threshold" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label10" x="71.0" y="170.0" parentComponent="pnlDeMudder"
+               width="50.0" height="20.0" text="Range" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="Label11" x="126.0" y="170.0" parentComponent="pnlDeMudder"
+               width="60.0" height="20.0" text="Level" editable="0" fontName="UnisansALLCAPS"
+               textColour="4282532418" fontSize="11.0"/>
+    <Component type="ScriptLabel" id="ScriptLabel1" x="0.0" y="0.0" width="190"
+               height="30" parentComponent="pnlDeMudder" text="DE-MUD" fontSize="20.0"
+               editable="0" fontName="UnisansALLCAPS" textColour="4282532418"/>
+    <Component type="ScriptSlider" id="knbDeMudFrequency" x="16.0" y="40.0"
+               style="Horizontal" middlePosition="225.0" stepSize="1.0" min="150.0"
+               max="350.0" suffix=" Hz" width="160.0" height="20.0" mode="Frequency"
+               parentComponent="pnlDeMudder" bgColour="4282532418" textColour="16777215"
+               tooltip="center frequency (in Hz) around which the processor works"/>
+    <Component type="ScriptLabel" id="Label8" x="16.0" y="60.0" width="160.0"
+               height="20.0" text="Frequency" parentComponent="pnlDeMudder"
+               editable="0" fontName="UnisansALLCAPS" textColour="4282532418"/>
+    <Component type="ScriptSlider" id="knbDeMudThreshold" x="16.0" y="90.0"
+               mode="Decibel" min="-60.0" max="0.0" stepSize="0.1000000014901161"
+               suffix=" dB" middlePosition="-18.0" style="Vertical" width="40.0"
+               height="80.0" parentComponent="pnlDeMudder" bgColour="4282532418"
+               textColour="13816530" tooltip="determines the level (in dB) above which the signal is processed."/>
+    <Component type="ScriptSlider" id="knbDeMudRange" x="76.0" y="90.0" mode="Decibel"
+               min="-18.0" max="0.0" stepSize="0.1000000014901161" suffix=" dB"
+               middlePosition="-9.0" style="Vertical" width="40.0" height="80.0"
+               parentComponent="pnlDeMudder" bgColour="4282532418" textColour="13816530"
+               tooltip="determines how much signal reduction is applied"/>
+    <Component type="ScriptPanel" id="pnlGRMud" x="136.0" y="90.0" width="40.0"
+               height="80.0" parentComponent="pnlDeMudder" tooltip="indicates the amount of compression applied to the EQ in real-time."/>
+    <Component type="ScriptPanel" id="pnlSubPanel2" x="56.0" y="190.0" width="70.0"
+               height="70.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="35.0" parentComponent="pnlDeMudder"/>
+    <Component type="ScriptPanel" id="PanelBG1" x="66.0" y="200.0" width="50.0"
+               height="50.0" itemColour="4285032552" itemColour2="4290624957"
+               textColour="0" borderSize="9.0" borderRadius="20.0" parentComponent="pnlDeMudder"/>
+    <Component type="ScriptPanel" id="PanelAbove1" x="76.0" y="210.0" width="30.0"
+               height="30.0" itemColour="4290624957" itemColour2="4283847250"
+               borderSize="1.0" borderRadius="20.0" parentComponent="pnlDeMudder"/>
+    <Component type="ScriptSlider" id="knbDeMudQ" x="66.0" y="199.0" width="50.0"
+               height="50.0" parentComponent="pnlDeMudder" min="0.300000011920929"
+               max="9.899999618530273" stepSize="0.1000000014901161" middlePosition="1.0"
+               defaultValue="1.0" tooltip=" controls the bandwidth around the center frequency"
+               showValuePopup="Left"/>
+    <Component type="ScriptLabel" id="Label12" x="60.0" y="250.0" width="60.0"
+               height="20.0" text="Q" parentComponent="pnlDeMudder" editable="0"
+               fontName="UnisansALLCAPS" textColour="4282532418" fontSize="15.0"/>
+  </Component>
+  <Component type="ScriptPanel" id="pnlButton" x="499.0" y="329.0" width="80.0"
+             height="30.0" itemColour="0" itemColour2="0" bgColour="4294967295"
+             borderSize="4.0" textColour="4282532418" borderRadius="3.0"/>
+  <Component type="ScriptPanel" id="pnlButton1" x="499.0" y="369.0" width="80.0"
+             height="30.0" itemColour="0" itemColour2="0" bgColour="4294967295"
+             borderSize="4.0" textColour="4282532418" borderRadius="3.0"/>
+  <Component type="ScriptButton" id="btnPeak" x="499.0" y="329.0" width="80.0"
+             height="30.0" text="Peak" radioGroup="1.0" tooltip="works as a bell filter centered on the selected frequency"
+             textColour="4282532418" itemColour2="1118481" itemColour="3355443"
+             bgColour="16777215"/>
+  <Component type="ScriptButton" id="btnShelf" x="499.0" y="369.0" width="80.0"
+             height="30.0" text="Shelf" radioGroup="1.0" tooltip="works as a high-shelf filter starting from the selected frequency"
+             textColour="4282532418" itemColour2="1118481" itemColour="3355443"
+             bgColour="16777215"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile3" x="0.0" y="420.0"
+             width="620" height="30" ContentType="TooltipPanel" bgColour="4281874488"
+             itemColour="872415231" itemColour2="0" textColour="3439329279"
+             Font="UnisansALLCAPS"/>
+  <Component type="ScriptLabel" id="Label18" x="400.0" y="450.0" width="200.0"
+             height="40.0" text="DE-" fontName="UnisansALLCAPS" fontSize="54.0"
+             alignment="right" editable="0"/>
+  <Component type="ScriptPanel" id="pnlPresetIcon" x="20.0" y="450.0" width="40.0"
+             height="40.0"/>
+  <Component type="ScriptButton" id="btnPreset" x="20.0" y="450.0" width="40.0"
+             height="40.0" bgColour="16777215" tooltip="Show / Hide Preset Browser"/>
+  <Component type="ScriptPanel" id="pnlPreset" x="0.0" y="0.0" width="600.0"
+             height="420.0" itemColour="4278190080" itemColour2="4278190080"
+             visible="0">
+    <Component type="ScriptFloatingTile" id="FloatingTile4" x="10.0" y="10.0"
+               parentComponent="pnlPreset" width="580.0" height="400.0" ContentType="PresetBrowser"
+               bgColour="4143972352" itemColour="4290624957" itemColour2="0"
+               Data="{&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: false,&#10;  &quot;ShowNotes&quot;: false,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 10,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowFavoriteIcon&quot;: false,&#10;  &quot;ButtonsInsideBorder&quot;: false,&#10;  &quot;NumColumns&quot;: 2,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.3333333333333333,&#10;    0.3333333333333333,&#10;    0.3333333333333333&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [],&#10;  &quot;MoreButtonBounds&quot;: [],&#10;  &quot;SaveButtonBounds&quot;: [],&#10;  &quot;FavoriteButtonBounds&quot;: []&#10;}"
+               textColour="4293980400"/>
+  </Component>
+</ContentProperties>

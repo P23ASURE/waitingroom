@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="pnlBackground" x="10.0" y="10.0" width="570.0"
+             height="530.0"/>
+  <Component type="ScriptPanel" id="Panel1" x="20.0" y="220.0" width="130.0"
+             height="160.0" itemColour="16777215" itemColour2="16777215" bgColour="3724541951"
+             borderSize="6.0" textColour="1857731258">
+    <Component type="ScriptPanel" id="Panel8" x="20.0" y="100.0" width="90.0"
+               height="40.0" textColour="2277161658" itemColour="0" itemColour2="0"
+               borderSize="4.0" parentComponent="Panel1"/>
+    <Component type="ScriptButton" id="btnMono" x="20.0" y="100.0" width="90.0"
+               height="40.0" text="Mono" parentComponent="Panel1" textColour="4214172973"
+               tooltip="Force Mono on Lowest Band " isPluginParameter="1" pluginParameterName="MakeItMono"
+               processorId="HardcodedMasterFX1" parameterId="Mono" bgColour="1090519039"/>
+  </Component>
+  <Component type="ScriptPanel" id="Panel2" x="160.0" y="140.0" width="130.0"
+             height="390.0" textColour="1857731258" itemColour="4278255615"
+             itemColour2="4278255615" borderSize="6.0" bgColour="4278255615"/>
+  <Component type="ScriptPanel" id="Panel3" x="440.0" y="140.0" width="130.0"
+             height="390.0" textColour="1857731258" itemColour="0" itemColour2="0"
+             borderSize="6.0"/>
+  <Component type="ScriptPanel" id="Panel4" x="300.0" y="140.0" width="130.0"
+             height="390.0" textColour="1857731258" itemColour="0" itemColour2="0"
+             borderSize="6.0"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile2" x="185.0" y="430.0"
+             width="80.0" height="80.0" ContentType="AudioAnalyser" bgColour="4294901760"
+             itemColour="4284201257" itemColour2="4293525504" textColour="4278190080"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;HardcodedMasterFX1&quot;,&#10;  &quot;Index&quot;: 0,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+             itemColour3="4278190080"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile3" x="325.0" y="430.0"
+             width="80.0" height="80.0" ContentType="AudioAnalyser" bgColour="4281545523"
+             itemColour="4287137928" itemColour2="4282664004" textColour="4278190080"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;HardcodedMasterFX1&quot;,&#10;  &quot;Index&quot;: 1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+             itemColour3="4278190080"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile4" x="465.0" y="430.0"
+             width="80.0" height="80.0" ContentType="AudioAnalyser" bgColour="4281545523"
+             itemColour="4287137928" itemColour2="4282664004" textColour="4278190080"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;HardcodedMasterFX1&quot;,&#10;  &quot;Index&quot;: 2,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+             itemColour3="4278190080"/>
+  <Component type="ScriptPanel" id="Panel5" x="185.0" y="430.0" width="80.0"
+             height="80.0" textColour="1857731258" itemColour="0" itemColour2="0"
+             borderSize="6.0"/>
+  <Component type="ScriptPanel" id="Panel6" x="325.0" y="430.0" width="80.0"
+             height="80.0" textColour="1857731258" itemColour="0" itemColour2="0"
+             borderSize="6.0"/>
+  <Component type="ScriptPanel" id="Panel7" x="465.0" y="430.0" width="80.0"
+             height="80.0" textColour="1857731258" itemColour="0" itemColour2="0"
+             borderSize="6.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel1" x="190.0" y="340.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel2" x="190.0" y="250.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel3" x="190.0" y="156.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel4" x="330.0" y="340.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel5" x="330.0" y="250.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel6" x="330.0" y="155.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel7" x="470.0" y="156.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel8" x="50.0" y="230.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel9" x="470.0" y="250.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="pnlSubPanel10" x="470.0" y="340.0" width="70.0"
+             height="70.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="35.0"/>
+  <Component type="ScriptPanel" id="PanelBG" x="201.0" y="165.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG1" x="200.0" y="260.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG2" x="200.0" y="350.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG3" x="340.0" y="350.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG4" x="340.0" y="260.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG5" x="340.0" y="165.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG6" x="480.0" y="166.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG7" x="480.0" y="260.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG8" x="480.0" y="350.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelBG9" x="60.0" y="240.0" width="50.0"
+             height="50.0" itemColour="4285032552" itemColour2="4278255615"
+             textColour="0" borderSize="9.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove" x="211.0" y="175.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove1" x="210.0" y="270.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove2" x="210.0" y="360.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove3" x="350.0" y="360.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove4" x="350.0" y="270.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove5" x="350.0" y="176.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove6" x="490.0" y="176.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove7" x="490.0" y="270.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove8" x="490.0" y="360.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptPanel" id="PanelAbove9" x="70.0" y="250.0" width="30.0"
+             height="30.0" itemColour="4278255615" itemColour2="4283847250"
+             borderSize="1.0" borderRadius="20.0"/>
+  <Component type="ScriptSlider" id="knbBand1" x="200.0" y="165.0" width="50.0"
+             height="50.0" mode="Frequency" min="20.0" max="20000.0" stepSize="1.0"
+             suffix=" Hz" middlePosition="1500.0" defaultValue="100.0" tooltip="Frequency Range"
+             showValuePopup="Left" showTextBox="0" isPluginParameter="1" pluginParameterName="Band1"/>
+  <Component type="ScriptSlider" id="knbBand2" x="340.0" y="165.0" width="50.0"
+             height="50.0" mode="Frequency" min="20.0" max="20000.0" stepSize="1.0"
+             suffix=" Hz" middlePosition="1500.0" defaultValue="1500.0" tooltip="Frequency Range"
+             showValuePopup="Left" showTextBox="0" isPluginParameter="1" pluginParameterName="Band2"/>
+  <Component type="ScriptSlider" id="knbBand3" x="480.0" y="165.0" width="50.0"
+             height="50.0" mode="Frequency" min="20.0" max="20000.0" stepSize="1.0"
+             suffix=" Hz" middlePosition="1500.0" defaultValue="6000.0" tooltip="Frequency Range"
+             showValuePopup="Left" showTextBox="0" isPluginParameter="1" pluginParameterName="Band3"/>
+  <Component type="ScriptLabel" id="Label1" x="160.0" y="215.0" text="Band 1"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label2" x="300.0" y="215.0" text="Band 2"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label3" x="440.0" y="215.0" text="Band 3"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptSlider" id="knbWidth1" x="200.0" y="260.0" width="50.0"
+             height="50.0" mode="NormalizedPercentage" suffix="%" middlePosition="1.0"
+             max="2.0" defaultValue="1.0" tooltip="Stereo Width" showValuePopup="Left"
+             showTextBox="0" isPluginParameter="1" pluginParameterName="Width1"
+             processorId="HardcodedMasterFX1" parameterId="Width1"/>
+  <Component type="ScriptSlider" id="knbWidth2" x="340.0" y="260.0" width="50.0"
+             height="50.0" mode="NormalizedPercentage" suffix="%" middlePosition="1.0"
+             max="2.0" defaultValue="1.0" tooltip="Stereo Width" showValuePopup="Left"
+             showTextBox="0" isPluginParameter="1" pluginParameterName="Width2"
+             processorId="HardcodedMasterFX1" parameterId="Width2"/>
+  <Component type="ScriptSlider" id="knbWidth3" x="480.0" y="260.0" width="50.0"
+             height="50.0" mode="NormalizedPercentage" suffix="%" middlePosition="1.0"
+             max="2.0" defaultValue="1.0" tooltip="Stereo Width" showValuePopup="Left"
+             showTextBox="0" isPluginParameter="1" pluginParameterName="Width3"
+             processorId="HardcodedMasterFX1" parameterId="Width3"/>
+  <Component type="ScriptLabel" id="Label4" x="160.0" y="310.0" text="Width"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label5" x="300.0" y="310.0" text="Width"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label6" x="440.0" y="310.0" text="Width"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptSlider" id="knbGain1" x="200.0" y="350.0" width="50.0"
+             height="50.0" mode="Decibel" min="-60.0" max="18.0" stepSize="0.1000000014901161"
+             suffix=" dB" middlePosition="0.0" tooltip="Band 1 Gain" showValuePopup="Left"
+             showTextBox="0" isPluginParameter="1" pluginParameterName="Gain1"
+             processorId="HardcodedMasterFX1" parameterId="Gain1"/>
+  <Component type="ScriptLabel" id="Label7" x="160.0" y="400.0" text="Gain"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label8" x="300.0" y="400.0" text="Gain"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label9" x="440.0" y="400.0" text="Gain"
+             fontName="UnisansALLCAPS" fontSize="16.0" textColour="4214172973"
+             editable="0"/>
+  <Component type="ScriptSlider" id="knbGain2" x="340.0" y="350.0" width="50.0"
+             height="50.0" text="knbGain1" mode="Decibel" min="-60.0" max="18.0"
+             stepSize="0.1000000014901161" suffix=" dB" middlePosition="0.0"
+             tooltip="Band 2 Gain" showValuePopup="Left" showTextBox="0" isPluginParameter="1"
+             pluginParameterName="Gain2" processorId="HardcodedMasterFX1"
+             parameterId="Gain2"/>
+  <Component type="ScriptSlider" id="knbGain3" x="480.0" y="350.0" width="50.0"
+             height="50.0" text="knbGain1" mode="Decibel" min="-60.0" max="18.0"
+             stepSize="0.1000000014901161" suffix=" dB" middlePosition="0.0"
+             tooltip="Band 3 Gain" showValuePopup="Left" showTextBox="0" isPluginParameter="1"
+             processorId="HardcodedMasterFX1" parameterId="Gain3"/>
+  <Component type="ScriptTable" id="Table1" x="20.0" y="20.0" width="550.0"
+             height="100.0" customColours="1" itemColour2="1118481" itemColour="3355443"
+             bgColour="16777215" processorId="HardcodedMasterFX1"/>
+  <Component type="ScriptTable" id="Table2" x="20.0" y="20.0" width="550.0"
+             height="100.0" customColours="1" itemColour2="1118481" itemColour="3355443"
+             bgColour="16777215" processorId="HardcodedMasterFX1" tableIndex="1"/>
+  <Component type="ScriptTable" id="Table3" x="20.0" y="20.0" width="550.0"
+             height="100.0" customColours="1" itemColour2="1118481" itemColour="3355443"
+             bgColour="16777215" processorId="HardcodedMasterFX1" tableIndex="2"/>
+  <Component type="ScriptSlider" id="knbGain0" x="60.0" y="240.0" width="50.0"
+             height="50.0" mode="Decibel" min="-60.0" max="18.0" stepSize="0.1000000014901161"
+             suffix=" dB" middlePosition="0.0" tooltip="Lowest Band Gain"
+             showValuePopup="Left" showTextBox="0" isPluginParameter="1" pluginParameterName="GainLowFreq"
+             processorId="HardcodedMasterFX1"/>
+  <Component type="ScriptLabel" id="Label10" x="20.0" y="290.0" text="Gain"
+             fontName="UnisansALLCAPS" textColour="4214172973" editable="0"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile1" x="20.0" y="20.0"
+             width="550.0" height="100.0" ContentType="AudioAnalyser" bgColour="3355443"
+             itemColour="1569228936" itemColour2="4473924" textColour="0"
+             Data="{&#10;  &quot;ProcessorId&quot;: &quot;Analyser1&quot;,&#10;  &quot;Index&quot;: 2,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+  <Component type="ScriptLabel" id="Label11" x="370.0" y="580.0" width="210.0"
+             height="50.0" text="RESPIRO" fontSize="46.0" alignment="right"
+             fontName="UnisansALLCAPS" editable="0"/>
+  <Component type="ScriptFloatingTile" id="FloatingTile5" x="20.0" y="540.0"
+             width="550.0" height="30.0" ContentType="TooltipPanel" bgColour="4281874488"
+             itemColour="436207615" itemColour2="0" textColour="3439329279"/>
+  <Component type="ScriptPanel" id="pnlPresetIcon" x="30.0" y="580.0" width="40.0"
+             height="40.0"/>
+  <Component type="ScriptButton" id="btnPreset" x="30.0" y="580.0" width="40.0"
+             height="40.0" bgColour="16777215" tooltip="Show/Hide Preset Browser"/>
+  <Component type="ScriptPanel" id="pnlPreset" x="10.0" y="10.0" width="570.0"
+             height="530.0" itemColour="4278190080" itemColour2="4278190080"
+             visible="0">
+    <Component type="ScriptFloatingTile" id="FloatingTile6" x="10.0" y="10.0"
+               parentComponent="pnlPreset" width="550.0" height="510.0" ContentType="PresetBrowser"
+               bgColour="4143972352" itemColour="4278255615" itemColour2="0"
+               Data="{&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: false,&#10;  &quot;ShowNotes&quot;: false,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 10,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowFavoriteIcon&quot;: false,&#10;  &quot;ButtonsInsideBorder&quot;: false,&#10;  &quot;NumColumns&quot;: 2,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.3333333333333333,&#10;    0.3333333333333333,&#10;    0.3333333333333333&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [],&#10;  &quot;MoreButtonBounds&quot;: [],&#10;  &quot;SaveButtonBounds&quot;: [],&#10;  &quot;FavoriteButtonBounds&quot;: []&#10;}"
+               Font="UnisansALLCAPS"/>
+  </Component>
+  <Component type="ScriptPanel" id="ZoomPanel" x="560.0" y="620.0" width="30.0"
+             height="20.0" allowCallbacks="All Callbacks" bgColour="4294967295"
+             itemColour2="2634022912" itemColour="2298478592" textColour="2113929215"/>
+</ContentProperties>

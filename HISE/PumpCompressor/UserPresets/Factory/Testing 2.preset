@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptComboBox" id="cmbAttack" value="18.0"/>
+    <Control type="ScriptComboBox" id="cmbRelease" value="23.0"/>
+    <Control type="ScriptSlider" id="knbThreshold" value="-41.5"/>
+    <Control type="ScriptSlider" id="knbRatio" value="13.69999980926514"/>
+    <Control type="ScriptSlider" id="knbKnee" value="16.17000007629395"/>
+    <Control type="ScriptSlider" id="knbMakeupGain" value="0.0"/>
+    <Control type="ScriptSlider" id="knbChannelLink" value="100.0"/>
+    <Control type="ScriptSlider" id="knbIn" value="0.0"/>
+    <Control type="ScriptSlider" id="knbOut" value="0.0"/>
+    <Control type="ScriptSlider" id="knbAttackUnsync" value="0.0"/>
+    <Control type="ScriptSlider" id="knbReleaseUnsync" value="0.0"/>
+    <Control type="ScriptSlider" id="knbMix" value="1.0"/>
+    <Control type="ScriptButton" id="btnPreset" value="1.0"/>
+  </Content>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Preset>

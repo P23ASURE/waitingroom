@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="Respiro" Bypassed="0" Gain="1.0" Balance="0.0"
+           VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0" packageName=""
+           BuildVersion="650">
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptButton" id="btnMono" value="1.0"/>
+            <Control type="ScriptSlider" id="knbBand1" value="100.0"/>
+            <Control type="ScriptSlider" id="knbBand2" value="1500.0"/>
+            <Control type="ScriptSlider" id="knbBand3" value="6000.0"/>
+            <Control type="ScriptSlider" id="knbWidth1" value="1.0"/>
+            <Control type="ScriptSlider" id="knbWidth2" value="1.0"/>
+            <Control type="ScriptSlider" id="knbWidth3" value="1.0"/>
+            <Control type="ScriptSlider" id="knbGain1" value="8.940696716308594e-7"/>
+            <Control type="ScriptSlider" id="knbGain2" value="8.940696716308594e-7"/>
+            <Control type="ScriptSlider" id="knbGain3" value="8.940696716308594e-7"/>
+            <Control type="ScriptTable" id="Table1" value="0.0" data=""/>
+            <Control type="ScriptTable" id="Table2" value="0.0" data=""/>
+            <Control type="ScriptTable" id="Table3" value="0.0" data=""/>
+            <Control type="ScriptSlider" id="knbGain0" value="8.940696716308594e-7"/>
+            <Control type="ScriptButton" id="btnPreset" value="0.0"/>
+          </Content>
+          <UIData Source="RespiroUIData"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="Hardcoded Master FX" ID="HardcodedMasterFX1" Bypassed="0"
+                   Network="script_fx1" Band1="100.0" Band2="1500.0" Band3="6000.0"
+                   Width1="1.0" Width2="1.0" Width3="1.0" Gain1="8.940696716308594e-7"
+                   Gain2="8.940696716308594e-7" Gain3="8.940696716308594e-7" Mono="1.0"
+                   Gain0="0.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+          <Tables>
+            <Table EmbeddedData=""/>
+            <Table EmbeddedData=""/>
+            <Table EmbeddedData=""/>
+          </Tables>
+        </Processor>
+        <Processor Type="Analyser" ID="Analyser1" Bypassed="0" BufferSize="8192.0"
+                   PreviewType="4.0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

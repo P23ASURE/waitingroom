@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="TestComp" Version="0.0.0">
+  <Node FactoryPath="container.chain" ID="TestComp" Bypassed="0" Name="TestComp">
+    <Nodes>
+      <Node ID="faust" FactoryPath="core.faust" Bypassed="0" Name="faust">
+        <Properties>
+          <Property ID="ClassId" Value="CompressorDSP1"/>
+          <Property ID="NumParameters" Value="2"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="20.0" StepSize="0.1000000014901161"
+                     ID="knee" Value="10.70000015944242"/>
+          <Parameter MinValue="1.0" MaxValue="20.0" StepSize="0.1000000014901161"
+                     ID="ratio" Value="11.00000014901161"/>
+          <Parameter MinValue="-96.0" MaxValue="10.0" StepSize="0.1000000014901161"
+                     ID="threshold" Value="-52.5999993532896"/>
+          <Parameter MinValue="-1000.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     ID="Add/Remove Attack" Value="0.0"/>
+          <Parameter MinValue="-1000.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     ID="Add/Remove Release" Value="0.0"/>
+          <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     ID="Attack" Value="2.0"/>
+          <Parameter MinValue="0.0" MaxValue="10000.0" StepSize="1.0" ID="Release"
+                     Value="500.0"/>
+          <Parameter MinValue="-96.0" MaxValue="96.0" StepSize="0.1000000014901161"
+                     ID="makeup gain" Value="1.430511474609375e-6"/>
+          <Parameter MinValue="0.0" MaxValue="100.0" StepSize="1.0" ID="channel link"
+                     Value="100.0"/>
+        </Parameters>
+        <SwitchTargets>
+          <SwitchTarget>
+            <Connections>
+              <Connection NodeId="converter1" ParameterId="Value"/>
+            </Connections>
+          </SwitchTarget>
+          <SwitchTarget>
+            <Connections>
+              <Connection NodeId="converter" ParameterId="Value"/>
+            </Connections>
+          </SwitchTarget>
+        </SwitchTargets>
+      </Node>
+      <Node ID="converter" FactoryPath="control.converter" Bypassed="0" Name="converter">
+        <Properties>
+          <Property ID="Mode" Value="db2Gain"/>
+        </Properties>
+        <ModulationTargets>
+          <Connection NodeId="global_cable" ParameterId="Value"/>
+        </ModulationTargets>
+        <Parameters>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1" SkewFactor="5.422270979580217"
+                     ID="Value" Automated="1"/>
+        </Parameters>
+      </Node>
+      <Node ID="converter1" FactoryPath="control.converter" Bypassed="0"
+            Name="converter1">
+        <Properties>
+          <Property ID="Mode" Value="db2Gain"/>
+        </Properties>
+        <ModulationTargets>
+          <Connection NodeId="global_cable1" ParameterId="Value"/>
+        </ModulationTargets>
+        <Parameters>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1" SkewFactor="5.422270979580217"
+                     ID="Value" Automated="1"/>
+        </Parameters>
+      </Node>
+      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+            Name="global_cable" NodeColour="4282888802">
+        <Properties>
+          <Property ID="Connection" Value="GainLeft"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+        </Parameters>
+      </Node>
+      <Node ID="global_cable1" FactoryPath="routing.global_cable" Bypassed="0"
+            Name="global_cable1" NodeColour="4282888851">
+        <Properties>
+          <Property ID="Connection" Value="GainRight"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+        </Parameters>
+      </Node>
+    </Nodes>
+    <Parameters/>
+  </Node>
+</Network>

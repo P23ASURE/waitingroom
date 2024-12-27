@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="script_fx1" Version="0.0.0" AllowCompilation="1">
+  <Node FactoryPath="container.chain" ID="script_fx1" Bypassed="0" Name="script_fx1"
+        ShowParameters="1">
+    <Nodes>
+      <Node ID="freq_split5" FactoryPath="container.split" ShowParameters="1"
+            Bypassed="0" Name="freq_split4">
+        <Parameters>
+          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                     ID="Band 1" Automated="1">
+            <Connections>
+              <Connection NodeId="lr1_1" ParameterId="Frequency"/>
+              <Connection NodeId="lr2_1" ParameterId="Frequency"/>
+              <Connection NodeId="lr3_1" ParameterId="Frequency"/>
+              <Connection NodeId="lr4_1" ParameterId="Frequency"/>
+              <Connection NodeId="cable_table" ParameterId="Value"/>
+            </Connections>
+          </Parameter>
+          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                     ID="Band 2" Automated="1">
+            <Connections>
+              <Connection NodeId="lr1_2" ParameterId="Frequency"/>
+              <Connection NodeId="lr2_2" ParameterId="Frequency"/>
+              <Connection NodeId="lr3_2" ParameterId="Frequency"/>
+              <Connection NodeId="lr4_2" ParameterId="Frequency"/>
+              <Connection NodeId="cable_table1" ParameterId="Value"/>
+            </Connections>
+          </Parameter>
+          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                     ID="Band 3" Automated="1">
+            <Connections>
+              <Connection NodeId="lr1_3" ParameterId="Frequency"/>
+              <Connection NodeId="lr2_3" ParameterId="Frequency"/>
+              <Connection NodeId="lr3_3" ParameterId="Frequency"/>
+              <Connection NodeId="lr4_3" ParameterId="Frequency"/>
+              <Connection NodeId="cable_table2" ParameterId="Value"/>
+            </Connections>
+          </Parameter>
+        </Parameters>
+        <Nodes>
+          <Node ID="band1" FactoryPath="container.chain" Bypassed="0" Name="band1">
+            <Nodes>
+              <Node ID="lr1_1" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979565"
+                    Folded="1" Bypassed="0" Name="lr1_1">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr1_2" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979565"
+                    Folded="1" Bypassed="0" Name="lr1_2">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr1_3" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979565"
+                    Folded="1" Bypassed="0" Name="lr1_3">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="dummy1" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                    Name="dummy1">
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="softbypass_switch3" FactoryPath="container.chain" ShowParameters="1"
+                    Bypassed="0" Name="softbypass_switch2">
+                <Nodes>
+                  <Node ID="gain3" FactoryPath="core.gain" Bypassed="0" Name="gain3">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="switcher" FactoryPath="control.xfader" Bypassed="0" Name="switcher"
+                        NodeColour="4284979595">
+                    <Properties>
+                      <Property ID="NumParameters" Value="2"/>
+                      <Property ID="Mode" Value="Switch"/>
+                    </Properties>
+                    <SwitchTargets>
+                      <SwitchTarget>
+                        <Connections>
+                          <Connection NodeId="sb1" ParameterId="Bypassed"/>
+                        </Connections>
+                      </SwitchTarget>
+                      <SwitchTarget>
+                        <Connections>
+                          <Connection NodeId="sb2" ParameterId="Bypassed"/>
+                        </Connections>
+                      </SwitchTarget>
+                    </SwitchTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sb_container" FactoryPath="container.chain" NodeColour="4284979595"
+                        Bypassed="0" Name="sb_container">
+                    <Properties>
+                      <Property ID="IsVertical" Value="0"/>
+                    </Properties>
+                    <Nodes>
+                      <Node ID="sb1" FactoryPath="container.soft_bypass" NodeColour="4284979595"
+                            Bypassed="0" Name="sb1">
+                        <Nodes>
+                          <Node ID="dummy" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                                Name="dummy">
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                            </Parameters>
+                          </Node>
+                        </Nodes>
+                        <Properties>
+                          <Property ID="SmoothingTime" Value="20"/>
+                        </Properties>
+                        <Parameters/>
+                      </Node>
+                      <Node ID="sb2" FactoryPath="container.soft_bypass" NodeColour="4284979595"
+                            Bypassed="0" Name="sb2">
+                        <Nodes>
+                          <Node ID="dummy5" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                                Name="dummy">
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                            </Parameters>
+                          </Node>
+                          <Node ID="split" FactoryPath="container.split" Bypassed="0" Name="split">
+                            <Nodes>
+                              <Node ID="matrix" FactoryPath="routing.matrix" Bypassed="0" Name="matrix">
+                                <Properties>
+                                  <Property ID="EmbeddedData" Value="72.3o8BJ+RKIy7R22DKonLqfAFY0uRyM37KsnjS04LRLu7RMmhAJFiLw.CL.kuAf3yHP9AmZdo.ly+ABfJogHKogvjjA.f2Y1Al"/>
+                                </Properties>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="matrix1" FactoryPath="routing.matrix" Bypassed="0" Name="matrix1">
+                                <Properties>
+                                  <Property ID="EmbeddedData" Value="72.3o8BJ+RKIy7R22DKonLqfAFY0uRyM37KsnjS04LRLu7RMmhAJFiLw.CL.kuAf3CjKCAmZdo.ly+ABfJogHKogvjjA.f2X0gk"/>
+                                </Properties>
+                                <Parameters/>
+                              </Node>
+                            </Nodes>
+                            <Parameters/>
+                          </Node>
+                        </Nodes>
+                        <Properties>
+                          <Property ID="SmoothingTime" Value="20"/>
+                        </Properties>
+                        <Parameters/>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Nodes>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Switch" Automated="1">
+                    <Connections>
+                      <Connection NodeId="switcher" ParameterId="Value"/>
+                    </Connections>
+                  </Parameter>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+          <Node ID="band2" FactoryPath="container.chain" Bypassed="0" Name="band2">
+            <Nodes>
+              <Node ID="lr2_1" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4286355815"
+                    Folded="1" Bypassed="0" Name="lr2_1">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr2_2" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4286355815"
+                    Folded="1" Bypassed="0" Name="lr2_2">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr2_3" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4286355815"
+                    Folded="1" Bypassed="0" Name="lr2_3">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="faust" FactoryPath="core.faust" Bypassed="0" Name="faust">
+                <Properties>
+                  <Property ID="ClassId" Value="StereoWidenerDSP"/>
+                  <Property ID="NumParameters" Value="0"/>
+                </Properties>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                             ID="width" Automated="1"/>
+                </Parameters>
+                <SwitchTargets/>
+              </Node>
+              <Node ID="gain" FactoryPath="core.gain" Bypassed="0" Name="gain">
+                <Parameters>
+                  <Parameter MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                             SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                  <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="dummy2" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                    Name="dummy2">
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="goniometer" FactoryPath="analyse.goniometer" Bypassed="0"
+                    Name="goniometer">
+                <ComplexData>
+                  <DisplayBuffers>
+                    <DisplayBuffer Index="0"/>
+                  </DisplayBuffers>
+                </ComplexData>
+                <Parameters/>
+              </Node>
+              <Node ID="cable_table" FactoryPath="control.cable_table" Bypassed="0"
+                    Name="cable_table">
+                <ComplexData>
+                  <Tables>
+                    <Table Index="0"/>
+                  </Tables>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+          <Node ID="band3" FactoryPath="container.chain" Bypassed="0" Name="band3">
+            <Nodes>
+              <Node ID="lr3_1" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4288246375"
+                    Folded="1" Bypassed="0" Name="lr3_1">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr3_2" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4288246375"
+                    Folded="1" Bypassed="0" Name="lr3_2">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr3_3" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4288246375"
+                    Folded="1" Bypassed="0" Name="lr3_3">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="faust1" FactoryPath="core.faust" Bypassed="0" Name="faust1">
+                <Properties>
+                  <Property ID="ClassId" Value="StereoWidenerDSP"/>
+                  <Property ID="NumParameters" Value="0"/>
+                </Properties>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                             ID="width" Automated="1"/>
+                </Parameters>
+                <SwitchTargets/>
+              </Node>
+              <Node ID="gain1" FactoryPath="core.gain" Bypassed="0" Name="gain1">
+                <Parameters>
+                  <Parameter MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                             SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                  <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="dummy3" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                    Name="dummy3">
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="goniometer1" FactoryPath="analyse.goniometer" Bypassed="0"
+                    Name="goniometer1">
+                <ComplexData>
+                  <DisplayBuffers>
+                    <DisplayBuffer Index="1"/>
+                  </DisplayBuffers>
+                </ComplexData>
+                <Parameters/>
+              </Node>
+              <Node ID="cable_table1" FactoryPath="control.cable_table" Bypassed="0"
+                    Name="cable_table1">
+                <ComplexData>
+                  <Tables>
+                    <Table Index="1"/>
+                  </Tables>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+          <Node ID="band4" FactoryPath="container.chain" Bypassed="0" Name="band4">
+            <Nodes>
+              <Node ID="lr4_1" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979601"
+                    Folded="1" Bypassed="0" Name="lr4_1">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr4_2" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979601"
+                    Folded="1" Bypassed="0" Name="lr4_2">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="2.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="lr4_3" FactoryPath="jdsp.jlinkwitzriley" NodeColour="4284979601"
+                    Folded="1" Bypassed="0" Name="lr4_3">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1"/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency"/>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Type" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="faust2" FactoryPath="core.faust" Bypassed="0" Name="faust2">
+                <Properties>
+                  <Property ID="ClassId" Value="StereoWidenerDSP"/>
+                  <Property ID="NumParameters" Value="0"/>
+                </Properties>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                             ID="width" Automated="1"/>
+                </Parameters>
+                <SwitchTargets/>
+              </Node>
+              <Node ID="gain2" FactoryPath="core.gain" Bypassed="0" Name="gain2">
+                <Parameters>
+                  <Parameter MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                             SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                  <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                             SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="dummy4" FactoryPath="math.mul" NodeColour="4294967295" Bypassed="0"
+                    Name="dummy4">
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                </Parameters>
+              </Node>
+              <Node ID="goniometer2" FactoryPath="analyse.goniometer" Bypassed="0"
+                    Name="goniometer2">
+                <ComplexData>
+                  <DisplayBuffers>
+                    <DisplayBuffer Index="2"/>
+                  </DisplayBuffers>
+                </ComplexData>
+                <Parameters/>
+              </Node>
+              <Node ID="cable_table2" FactoryPath="control.cable_table" Bypassed="0"
+                    Name="cable_table2">
+                <ComplexData>
+                  <Tables>
+                    <Table Index="2"/>
+                  </Tables>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+        </Nodes>
+      </Node>
+    </Nodes>
+    <Parameters>
+      <Parameter ID="Band1" MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                 Value="279.6652773417414">
+        <Connections>
+          <Connection NodeId="freq_split5" ParameterId="Band 1"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Band2" MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                 Value="1877.783935611463">
+        <Connections>
+          <Connection NodeId="freq_split5" ParameterId="Band 2"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Band3" MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                 Value="9997.818667919679">
+        <Connections>
+          <Connection NodeId="freq_split5" ParameterId="Band 3"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Width1" MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                 Value="1.0">
+        <Connections>
+          <Connection NodeId="faust" ParameterId="width"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Width2" MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                 Value="1.0">
+        <Connections>
+          <Connection NodeId="faust1" ParameterId="width"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Width3" MinValue="0.0" MaxValue="2.0" StepSize="0.009999999776482582"
+                 Value="1.0">
+        <Connections>
+          <Connection NodeId="faust2" ParameterId="width"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Gain1" MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                 SkewFactor="5.422270774841309" Value="0">
+        <Connections>
+          <Connection NodeId="gain" ParameterId="Gain"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Gain2" MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                 SkewFactor="5.422270774841309" Value="0">
+        <Connections>
+          <Connection NodeId="gain1" ParameterId="Gain"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Gain3" MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                 SkewFactor="5.422270774841309" Value="0">
+        <Connections>
+          <Connection NodeId="gain2" ParameterId="Gain"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Mono" MinValue="0.0" MaxValue="1.0" StepSize="1.0" Value="1.0">
+        <Connections>
+          <Connection NodeId="softbypass_switch3" ParameterId="Switch"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Gain0" MinValue="-100.0" MaxValue="18.0" StepSize="0.1000000014901161"
+                 SkewFactor="5.422270774841309" Value="0">
+        <Connections>
+          <Connection NodeId="gain3" ParameterId="Gain"/>
+        </Connections>
+      </Parameter>
+    </Parameters>
+  </Node>
+</Network>
