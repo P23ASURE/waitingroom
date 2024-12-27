@@ -50,5 +50,3 @@ For example, if the DAW is set to 120 BPM, the user can select from the followin
 ...and so on.
 
 ---
-
-Stay tuned for updates and new additions to these projects!
