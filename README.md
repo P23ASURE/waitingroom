@@ -9,7 +9,7 @@ A glue audio compressor with tempo sync functionality.
 The user can set attack and release times based on the tempo provided by the DAW.  
 *(Example: Attack set to 1/128 and Release to 1/256t)*  
 
-The core logic of the compressor is implemented in FAUST and is available in this HISE project or within the repository named **"Faust DSP"**.
+The core logic of the compressor is implemented in FAUST and is available in this HISE project or within the directory named **"Faust"**.
 
 Attack and release times are calculated inside Scriptnode.  
 
