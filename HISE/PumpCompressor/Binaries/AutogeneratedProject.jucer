@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="Tw64Zd" name="PumpComp" projectType="audioplug" version="0.9.0"
+              bundleIdentifier="com.23DSP.pumpcomp" includeBinaryInAppConfig="1"
+              buildVST="0" buildVST3="1" buildAU="0" buildAUv3="0" buildStandalone="0"
+              buildRTAS="0" buildAAX="0" pluginName="PumpComp" pluginDesc="PumpComp"
+              pluginManufacturer="23DSP" pluginManufacturerCode="Abcd" pluginCode="Ppcp"
+              pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="1"
+              pluginAUExportPrefix="DemoProjectAU" pluginRTASCategory="" aaxIdentifier=""
+              pluginAAXCategory="32" pluginVST3Category="Fx,Dynamics" companyName="23DSP"
+              companyWebsite="http://yourcompany.com" companyCopyright="(c)2017, Company"
+              displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
+              enableIAA="1" cppLanguageStandard="17" pluginFormats="buildVST3,enableIAA"
+              pluginCharacteristicsValue="pluginEditorRequiresKeys" jucerFormatVersion="1">
+  <MAINGROUP id="SLR7uY" name="PumpComp">
+    <GROUP id="{122C85F1-8B09-257A-B636-113E3EAC258A}" name="Source">
+      <FILE id="KmyOlv" name="infoError.png" compile="0" resource="1" file="Source/Images/infoError.png"/>
+      <FILE id="CNpA5r" name="infoInfo.png" compile="0" resource="1" file="Source/Images/infoInfo.png"/>
+      <FILE id="MjbOy3" name="infoQuestion.png" compile="0" resource="1"
+            file="Source/Images/infoQuestion.png"/>
+      <FILE id="zsTpOz" name="infoWarning.png" compile="0" resource="1" file="Source/Images/infoWarning.png"/>
+      <FILE id="jJzDA2" name="CopyProtection.cpp" compile="1" resource="0"
+            file="Source/CopyProtection.cpp"/>
+      <FILE id="AOT2K8" name="Plugin.cpp" compile="1" resource="0" file="Source/Plugin.cpp"/>
+      <FILE id="esGQuC" name="PresetData.cpp" compile="1" resource="0" file="Source/PresetData.cpp"/>
+      <FILE id="q8WZ82" name="PresetData.h" compile="0" resource="0" file="Source/PresetData.h"/>
+      <GROUP id="EiZV1U" name="nodes">
+        <FILE id="lM4d6J" name="CompressorDSP1.h" compile="0" resource="0"
+              file="..\AdditionalSourceCode\nodes\CompressorDSP1.h"/>
+        <FILE id="vwH5Fu" name="Compressor_networkdata.h" compile="0" resource="0"
+              file="..\AdditionalSourceCode\nodes\Compressor_networkdata.h"/>
+        <FILE id="uQq8BY" name="factory.cpp" compile="1" resource="0" file="..\AdditionalSourceCode\nodes\factory.cpp"/>
+        <FILE id="gn7HeC" name="includes.h" compile="0" resource="0" file="..\AdditionalSourceCode\nodes\includes.h"/>
+        <FILE id="X9WiKp" name="RNBO.cpp" compile="1" resource="0" file="..\AdditionalSourceCode\nodes\RNBO.cpp"/>
+        <FILE id="f9zDSu" name="script_fx1_networkdata.h" compile="0" resource="0"
+              file="..\AdditionalSourceCode\nodes\script_fx1_networkdata.h"/>
+        <FILE id="URU6ZY" name="script_fx2_networkdata.h" compile="0" resource="0"
+              file="..\AdditionalSourceCode\nodes\script_fx2_networkdata.h"/>
+        <FILE id="jAZWWt" name="script_fx3.h" compile="0" resource="0" file="..\AdditionalSourceCode\nodes\script_fx3.h"/>
+        <FILE id="WndUQT" name="TestComp_networkdata.h" compile="0" resource="0"
+              file="..\AdditionalSourceCode\nodes\TestComp_networkdata.h"/>
+      </GROUP>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="C:\Users\Marco\Desktop\Development\HISE-4\tools\SDK\VST3 SDK"
+            vst3Folder="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules\juce_audio_processors\format_types\VST3_SDK"
+            IPP1ALibrary="" extraDefs="HISE_NUM_PLUGIN_CHANNELS=2&#10;&#10;"
+            extraCompilerFlags="/bigobj /cgthreads8  /wd&quot;4100&quot; /wd&quot;4127&quot; /wd&quot;4244&quot; /wd&quot;4661&quot; /wd&quot;4456&quot; /wd&quot;4457&quot; /wd&quot;4458&quot; /wd&quot;4459&quot; ">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="1" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="PumpComp Debug" headerPath="C:\Program Files\Faust\include"
+                       libraryPath=";" binaryPath="Compiled/" useRuntimeLibDLL="0" prebuildCommand="%PREBUILD_COMMAND%"/>
+        <CONFIGURATION name="Release" winWarningLevel="1" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="PumpComp" headerPath="C:\Program Files\Faust\include"
+                       libraryPath=";" binaryPath="Compiled/" linkTimeOptimisation="1"
+                       useRuntimeLibDLL="0" prebuildCommand="%PREBUILD_COMMAND%"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_product_unlocking" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="hi_dsp_library" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust_types" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_frontend" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_scripting" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_core" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_lac" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_zstd" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_rlottie" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_streaming" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_tools" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_snex" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="melatonin_blur" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+      </MODULEPATHS>
+    </VS2022>
+    <XCODE_MAC targetFolder="Builds/MacOSX" vstLegacyFolder="C:\Users\Marco\Desktop\Development\HISE-4\tools\SDK\VST3 SDK"
+               vst3Folder="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules\juce_audio_processors\format_types\VST3_SDK"
+               extraCompilerFlags="-Wno-reorder -Wno-inconsistent-missing-override  -fno-aligned-allocation"
+               extraLinkerFlags=" %OSX_STATIC_LIBS%" extraDefs="HISE_NUM_PLUGIN_CHANNELS=2&#10;&#10;"
+               hardenedRuntime="0" hardenedRuntimeOptions="com.apple.security.cs.allow-jit,com.apple.security.cs.allow-unsigned-executable-memory,com.apple.security.device.audio-input"
+               xcodeValidArchs="arm64,arm64e,x86_64" externalLibraries="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="10.9 SDK" osxArchitecture="64BitIntel"
+                       isDebug="1" optimisation="1" enablePluginBinaryCopyStep="1" targetName="PumpComp Debug"
+                       headerPath=";C:\Program Files\Faust\include" libraryPath=";;"
+                       cppLibType="libc++"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="10.9 SDK" osxArchitecture="64BitIntel"
+                       isDebug="0" optimisation="3" enablePluginBinaryCopyStep="1" targetName="PumpComp"
+                       headerPath=";C:\Program Files\Faust\include" libraryPath=";;"
+                       cppLibType="libc++" linkTimeOptimisation="1" stripLocalSymbols="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_product_unlocking" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="hi_dsp_library" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust_types" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_frontend" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_scripting" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_core" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_lac" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_zstd" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_rlottie" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_streaming" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_tools" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_snex" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="melatonin_blur" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight"
+                  extraCompilerFlags="-Wno-reorder -Wno-inconsistent-missing-override -fno-aligned-allocation"
+                  extraLinkerFlags="%OSX_STATIC_LIBS%" extraDefs="&#10;USE_IPP=0&#10;HISE_IOS=1&#10;JUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1&#10;USE_VDSP_FFT=1"
+                  UIStatusBarHidden="1" iosBackgroundAudio="1" iosBackgroundBle="0"
+                  customXcodeResourceFolders="../Samples\n../Images\nEmbeddedResources\n../UserPresets"
+                  iosAppGroups="%USE_APP_GROUPS%" iosAppGroupsId="%APP_GROUP_ID%"
+                  iosAppExtensionDuplicateResourcesFolder="0" iosDevelopmentTeamID="%DEVELOPMENT_TEAM_ID%"
+                  iosDeviceFamily="%TARGET_FAMILY%">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" iosCompatibility="9.0" isDebug="1" optimisation="1"
+                       targetName="PumpComp_Debug" headerPath="C:\Program Files\Faust\include"
+                       cppLanguageStandard="c++11" cppLibType="libc++"/>
+        <CONFIGURATION name="Release" iosCompatibility="9.0" isDebug="0" optimisation="3"
+                       targetName="PumpComp" headerPath="C:\Program Files\Faust\include"
+                       cppLanguageStandard="c++11" cppLibType="libc++" linkTimeOptimisation="1"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_product_unlocking" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="hi_scripting" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_frontend" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_dsp_library" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust_types" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_core" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_lac" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_rlottie" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_zstd" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_streaming" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_tools" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_snex" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="melatonin_blur" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vstLegacyFolder="C:\Users\Marco\Desktop\Development\HISE-4\tools\SDK\VST3 SDK"
+                extraLinkerFlags="" extraCompilerFlags="-fpermissive" extraDefs="HISE_NUM_PLUGIN_CHANNELS=2&#10;"
+                linuxExtraPkgConfig="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" linkTimeOptimisation="0"
+                       targetName="PumpComp Debug" headerPath=";C:\Program Files\Faust\include"
+                       libraryPath=""/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" linkTimeOptimisation="1"
+                       targetName="PumpComp" headerPath=";C:\Program Files\Faust\include"
+                       libraryPath=""/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_product_unlocking" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="C:\Users\Marco\Desktop\Development\HISE-4\JUCE\modules"/>
+        <MODULEPATH id="hi_streaming" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_scripting" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_lac" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_frontend" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_dsp_library" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_faust_types" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_zstd" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_rlottie" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_core" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hi_tools" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="hnode_jit" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+        <MODULEPATH id="melatonin_blur" path="C:\Users\Marco\Desktop\Development\HISE-4"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="hi_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_dsp_library" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_faust" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_faust_types" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_frontend" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_lac" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_rlottie" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_scripting" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_snex" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="hi_streaming" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_tools" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_zstd" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_product_unlocking" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="melatonin_blur" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled" USE_BACKEND="0" USE_FRONTEND="1" USE_RAW_FRONTEND="0"
+               HI_EXPORT_DSP_LIBRARY="0" HISE_ENABLE_MIDI_INPUT_FOR_FX="0" PROCESS_SOUND_GENERATORS_IN_FX_PLUGIN="0"
+               HISE_MIDIFX_PLUGIN="0" USE_COPY_PROTECTION="0" IS_STANDALONE_APP="0"
+               USE_IPP="0" FRONTEND_IS_PLUGIN="1" USE_CUSTOM_FRONTEND_TOOLBAR="0"
+               IS_STANDALONE_FRONTEND="0" USE_GLITCH_DETECTION="1" ENABLE_PLOTTER="0"
+               ENABLE_SCRIPTING_SAFE_CHECKS="0" ENABLE_ALL_PEAK_METERS="0" USE_SPLASH_SCREEN="0"
+               HISE_OVERWRITE_OLD_USER_PRESETS="0" HI_SUPPORT_MONO_CHANNEL_LAYOUT="0"
+               HI_SUPPORT_FULL_DYNAMICS_HLAC="0" ENABLE_CONSOLE_OUTPUT="0" HI_ENABLE_LEGACY_CPU_SUPPORT="0"
+               HISE_INCLUDE_FAUST="1" HISE_USE_SYSTEM_APP_DATA_FOLDER="0" HISE_INCLUDE_RLOTTIE="1"
+               HLAC_MEASURE_DECODING_PERFORMANCE="0" HLAC_DEBUG_LOG="0" HLAC_INCLUDE_TEST_SUITE="0"
+               STANDALONE_STREAMING="0" JUCE_ASSERTION_FIRFILTER="0" JUCE_WEB_BROWSER="0"
+               JUCE_USE_CURL="0" JUCE_DSP_USE_INTEL_MKL="0" JUCE_DSP_USE_SHARED_FFTW="0"
+               JUCE_DSP_USE_STATIC_FFTW="0" HISE_USE_CUSTOM_EXPANSION_TYPE="0"
+               READ_ONLY_FACTORY_PRESETS="1" JUCE_HEADLESS_PLUGIN_CLIENT="disabled"
+               HISE_INCLUDE_LORIS="0"/>
+</JUCERPROJECT>
