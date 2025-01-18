@@ -1,0 +1,61 @@
+import("stdfaust.lib");
+
+declare name "Bass Subtractive Synth";
+declare description "A subtractive synthesizer optimized for bass sounds with PolyBLEP anti-aliasing";
+
+// Control parameters
+freq = hslider("freq", 55, 20, 500, 0.01);
+gain = hslider("gain", 0.5, 0, 1, 0.01);
+cutoff = hslider("cutoff[scale:log]", 800, 20, 10000, 1);
+resonance = hslider("resonance", 1, 1, 8, 0.1);
+oscMix = hslider("osc_mix", 0.5, 0, 1, 0.01);
+
+// Envelope parameters
+attack = hslider("attack", 0.01, 0.001, 1, 0.001);
+decay = hslider("decay", 0.3, 0.001, 1, 0.001);
+sustain = hslider("sustain", 0.7, 0, 1, 0.01);
+release = hslider("release", 0.5, 0.001, 2, 0.001);
+
+// Phase accumulator for oscillators
+phasor(freq) = (+(freq/ma.SR) ~ ma.frac);
+
+// Anti-aliased sawtooth with PolyBLEP
+sawtoothBLEP(f) = phasor(f) : \(p).(
+    2.0 * p - 1.0 - poly_blep(p, f/ma.SR)
+) * 1.2 with {  // Lil' boost to match original level
+    poly_blep(t, dt) = ba.if(t < dt, 
+        t/dt - (t*t)/(2*dt*dt),
+        ba.if(t > 1-dt,
+            ((t-1)*((t-1)/(2*dt)) + (t-1)/dt + 1),
+            0));
+};
+
+// Anti-aliased square with PolyBLEP
+squareBLEP(f) = phasor(f) : \(p).(
+    square(p) + 
+    poly_blep(p, f/ma.SR) - 
+    poly_blep(ma.frac(p+0.5), f/ma.SR)
+) * 1.2 with {  // tryin' to match original level, again
+    poly_blep(t, dt) = ba.if(t < dt, 
+        t/dt - (t*t)/(2*dt*dt),
+        ba.if(t > 1-dt,
+            ((t-1)*((t-1)/(2*dt)) + (t-1)/dt + 1),
+            0));
+    square(p) = ba.if(p < 0.5, 1, -1);
+};
+
+// Mix oscillators without normalization 
+mixedOsc = sawtoothBLEP(freq) * (1-oscMix) + squareBLEP(freq) * oscMix;
+
+// ADSR envelope
+envelope = en.adsre(attack, decay, sustain, release, button("gate"));
+
+// Filter & envelope modulation
+filterCutoff = cutoff * (1 + envelope * 0.5);
+filter = fi.resonlp(filterCutoff, resonance, 1);
+
+// DC blocker
+dcblocker = fi.dcblocker;
+
+// Final signal chain + DC blocking
+process = mixedOsc : filter : *(envelope) : *(gain) : dcblocker;
