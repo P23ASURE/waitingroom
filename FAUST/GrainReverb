@@ -1,0 +1,99 @@
+import("stdfaust.lib");
+
+//==============================
+// Keith Barr's Allpass Loop Reverb
+//==============================
+reverb(I, O, N, SEQ, parspace, start) = si.bus(I) <: (
+    // Wet path
+    (inputStage(I, N) : 
+        (ro.interleave(N, N/(N/2)) : par(i, N, si.bus(2) :> _) : 
+            par(i, N, 
+                seq(k, SEQ, 
+                    EnhancedModAPF(
+                        (efficientPrime((k+start) + (i*parspace)) : MS2T), 
+                        (efficientPrime((k+start) + (i*parspace)) / 100 : MS2T), 
+                        (0.5 / efficientPrime((k+start) + (i*parspace)) : MS2T)
+                    ) 
+                ) :
+                _ * revDecayMod
+            ) : ro.crossNM(N - 1, 1)) ~ 
+        si.bus(N) :> 
+        outputStage(O, N)),
+    // Dry path - properly isolated
+    (par(i, I, _ * (1 - revMix)))
+) :> si.bus(O)
+with {
+    // Input Stage
+    inputStage(I, N) = par(i, N, (_ * revInput * revMix) / N);
+
+    // Output Stage
+    outputStage(O, N) = par(i, O, (_ * revOutput));
+
+    // Conversion: milliseconds to samples
+    MS2T(t) = t * ma.SR / 1000;
+
+    // Prime number generator
+    efficientPrime(index) = ba.take(index % 100, primeList) with {
+        primeList = (2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,
+                     73,79,83,89,97,101,103,107,109,113,127,131,137,139,149,
+                     151,157,163,167,173,179,181,191,193,197,199,211,223,227,
+                     229,233,239,241,251,257,263,269,271,277,281,283,293,307,
+                     311,313,317,331,337,347,349,353,359,367,373,379,383,389,
+                     397,401,409,419,421,431,433,439,443,449,457,461,463,467,
+                     479,487,491,499,503,509,521,523,541);
+    };
+
+    // Modulated Allpass filter
+    EnhancedModAPF(delsamples, samplesmod, freqmod) = ( + : _ <: 
+        delayMod(delsamples, samplesmod, freqmod),
+        * (COEFF))~ * (-COEFF) : mem, _ : + : _ 
+    with {
+        delayMod(samples, samplesMod, freqMod, x) = de.fdelay(samples, 
+            samples - modulation(freqMod, samplesMod))
+        with {
+            modulation(f, samples) = (os.triangle(f) + 1) / 2 * samples;
+        };
+    };
+
+    // Parameters
+    revDecay = hslider("revDecay", 0.7, 0.1, 1, 0.01) : si.smoo;
+    revDecayMod = revDecay;
+    revInput = hslider("revInput", 1, 0, 1, 0.01) : si.smoo;
+    revOutput = hslider("revOutput", 1, 0, 1, 0.01) : si.smoo;
+    revMix = hslider("revMix", 0.5, 0, 1, 0.01) : si.smoo;
+
+    // Allpass Coefficient
+    COEFF = 0.85;
+};
+
+//==============================
+// Granulator Processing
+//==============================
+granulator = process
+with {
+    grainTrig = vslider("grainTrig", 0, 0, 1, 1);
+    grainSize = vslider("grainSize", 1500, 100, 5000, 1) : int : si.smoo;
+    grainPitch = vslider("grainPitch", 6.5, -12, 12, 0.1) : si.smoo;
+    grainMix = vslider("grainMix", 0.5, 0, 1, 0.01) : si.smoo;
+    
+    freq = abs(ma.SR / grainSize * pow(2, grainPitch/12));
+    ramp = (+(freq/ma.SR) : ma.frac) ~ _;
+    ramp1 = 1 - ramp;
+    ramp2 = ma.frac(ramp1 + 0.5);
+    
+    window(x) = sin(x * ma.PI) * sin(x * ma.PI);
+    
+    delayLine(phase) = de.delay(5000, phase * grainSize);
+    
+    grain = _ <: select2(grainTrig, _, 
+        delayLine(ramp1) * window(ramp1) +
+        delayLine(ramp2) * window(ramp2)
+    );
+    
+    process = _ <: (_ * (1-grainMix)), (grain * grainMix) :> _;
+};
+
+//==============================
+// Main Processing Chain
+//==============================
+process = _,_ <: (_,_), reverb(2, 2, 8, 2, 5, 10) : (_, _), (granulator, granulator) :> _,_;
